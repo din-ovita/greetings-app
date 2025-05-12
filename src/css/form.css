@@ -1,0 +1,193 @@
+body {
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Ini penting */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F2EAD3;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 480px;
+}
+
+.flag {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.img-flag1,
+.img-flag2 {
+  width: 230px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideDown 1s ease-out forwards;
+}
+
+.img-flag2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container{
+  padding: 2rem; position: relative; z-index: 0;
+}
+
+.header-logo {
+  display: flex; justify-content: center;
+  align-items: center;
+}
+
+.header-logo h2 {
+  font-family: 'DM Serif Display', serif;
+  color: #3F2305;
+  margin: 0;
+}
+
+.img-logo {
+  width: 40px; 
+  height: auto;
+}
+
+.header p {
+  font-family: 'Poppins', sans-serif;
+  color: #3F2305;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1.5rem auto;
+}
+
+.form label {
+  font-family: 'Poppins', sans-serif;
+  color: #3F2305;
+  font-size: 14px;
+  text-align: left;
+}
+
+.balloon-wrapper {
+  position: relative; 
+}
+
+.balloon-floating {
+  position: absolute;
+  right: -20px; 
+  top: -20px;
+  width: 120px; 
+  z-index: 0;
+  opacity: 0.7;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.balloon-floating2 {
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  transform: translateX(-50%);
+  width: 200px;
+  opacity: 0.6;
+  z-index: 0;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+.balloon-floating3 {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  transform: translateX(-50%);
+  width: 100px;
+  opacity: 0.6;
+  z-index: 0;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+.balloon-floating4 {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  transform: translateX(-50%);
+  width: 100px;
+  opacity: 0.6;
+  z-index: 0;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* Animasi naik-turun */
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.glass-input {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  color: #3F2305;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative; z-index: 1;
+}
+
+.glass-input:focus {
+  outline: none;
+  border: none;
+  color: #3F2305;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.glass-button {
+  width: 100%;
+  padding: 16px 0;
+  background: rgba(223, 215, 191, 0.5);
+  color: #3F2305;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px); position: relative; z-index: 1;
+}
+
+.glass-button:hover {
+  background: rgba(223, 215, 191, 0.8);
+}
+
+.glass-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  width: 100%;
+  color: #3F2305;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
