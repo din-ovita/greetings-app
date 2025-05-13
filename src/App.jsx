@@ -39,11 +39,34 @@ import balloon from './assets/balloon.png'
 import balloon2 from './assets/balloon2.png'
 import flag from './assets/flag.png'
 import ijazah from './assets/ijazah.png'
+import { useEffect, useRef } from 'react'
+import musik from './assets/btobmissingyou.mp3';
 
 function App() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      if (audioRef.current) {
+        audioRef.current.play().catch((err) => {
+          console.warn("Gagal memutar audio:", err);
+        });
+      }
+      // Hanya jalankan sekali
+      window.removeEventListener('click', handleUserInteraction);
+    };
+
+    window.addEventListener('click', handleUserInteraction);
+    return () => {
+      window.removeEventListener('click', handleUserInteraction);
+    };
+  }, []);
 
   return (
     <>
+      <audio ref={audioRef} loop>
+        <source src={musik} type="audio/mpeg" />
+      </audio>
       <div className='flag'>
         <img src={flag} className='img-flag1' />
         <img src={flag} className='img-flag2' />
