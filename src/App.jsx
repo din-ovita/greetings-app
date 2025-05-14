@@ -87,7 +87,7 @@ function App() {
         </div>
         <div className='form balloon-wrapper'>
           <label>Sedikit ucapan dariku...</label>
-          <textarea rows={5} className="glass-input"></textarea>
+          <textarea rows={8} className="glass-input"></textarea>
           <img src={balloon2} className="balloon-floating" />
         </div>
         <div>
