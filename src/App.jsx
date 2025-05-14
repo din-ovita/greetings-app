@@ -63,42 +63,44 @@ function App() {
   }, []);
 
   return (
-    <>
-      <audio ref={audioRef} loop>
-        <source src={musik} type="audio/mpeg" />
-      </audio>
-      <div className='flag'>
-        <img src={flag} className='img-flag1' />
-        <img src={flag} className='img-flag2' />
-      </div>
-      <div className='container'>
-        <div className='header'>
-          <div className='header-logo'>
-            <h2>Class of 2025</h2>
-            <img src={ijazah} className='img-logo' />
+    <body>
+      <div id="root">
+        <audio ref={audioRef} loop>
+          <source src={musik} type="audio/mpeg" />
+        </audio>
+        <div className='flag'>
+          <img src={flag} className='img-flag1' />
+          <img src={flag} className='img-flag2' />
+        </div>
+        <div className='container'>
+          <div className='header'>
+            <div className='header-logo'>
+              <h2>Class of 2025</h2>
+              <img src={ijazah} className='img-logo' />
+            </div>
+            <p>Akhirnya lulus juga ya! Gak kerasa udah sejauh ini bareng-bareng. Makasih udah jadi bagian dari perjalanan seru ini. </p>
           </div>
-          <p>Akhirnya lulus juga ya! Gak kerasa udah sejauh ini bareng-bareng. Makasih udah jadi bagian dari perjalanan seru ini. </p>
+          <img src={balloon} className="balloon-floating3" />
+          <img src={balloon} className="balloon-floating4" />
+          <div className='form'>
+            <label>Hai, namaku...</label>
+            <input className="glass-input" />
+          </div>
+          <div className='form balloon-wrapper'>
+            <label>Sedikit ucapan dariku...</label>
+            <textarea rows={8} className="glass-input"></textarea>
+            <img src={balloon2} className="balloon-floating" />
+          </div>
+          <div>
+            <button className="glass-button"><span>Kirim</span></button>
+          </div>
+          <img src={balloon} className="balloon-floating2" />
         </div>
-        <img src={balloon} className="balloon-floating3" />
-        <img src={balloon} className="balloon-floating4" />
-        <div className='form'>
-          <label>Hai, namaku...</label>
-          <input className="glass-input" />
-        </div>
-        <div className='form balloon-wrapper'>
-          <label>Sedikit ucapan dariku...</label>
-          <textarea rows={8} className="glass-input"></textarea>
-          <img src={balloon2} className="balloon-floating" />
-        </div>
-        <div>
-          <button className="glass-button"><span>Kirim</span></button>
-        </div>
-        <img src={balloon} className="balloon-floating2" />
+        <footer className="footer">
+          <p>Craft by Din.Ovita @2025</p>
+        </footer>
       </div>
-      <footer className="footer">
-        <p>Craft by Din.Ovita @2025</p>
-      </footer>
-    </>
+    </body>
   )
 }
 
