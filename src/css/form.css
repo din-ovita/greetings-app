@@ -248,3 +248,10 @@ body {
   font-size: 12px;
   background-color: transparent;
 }
+
+/* SweetAlert2: jadikan Poppins sebagai font utama */
+.swal2-popup,
+.swal2-title,
+.swal2-html-container {
+  font-family: 'Poppins', sans-serif;
+}
